@@ -65,6 +65,14 @@ def home(request):
         return render(request, "loft/home.html", {"games":games})
     else:
         return HttpResponse(status=500)
+def chatRoom(request):
+    if request.method =="GET":
+        if request.user.is_authenticated:
+            return redirect("loft:index")
+        games = Game.objects.all()
+        return render(request, "loft/chatRoom.html", {"games":games})
+    else:
+        return HttpResponse(status=500)
 
 def create(request):
     if request.method == "POST":

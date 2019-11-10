@@ -13,6 +13,7 @@ urlpatterns = [
     path('logout', views.logout_view, name='logout'),
     path('signup', views.signup, name='signup'),
     path('home', views.home, name='home'),
+    path('chatRoom', views.home, name='chatRoom'),
     path('payment/success/', views.payment_success, name='payment_success'),
     path('payment/cancel', views.payment_cancel, name='payment_cancel'),
     path('payment/error', views.payment_error, name='payment_error'),
