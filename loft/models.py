@@ -27,3 +27,9 @@ class Transaction(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE)
     paid_amount = models.FloatField()
     timestamp = models.DateField(default=timezone.now)
+
+class chatRoom(models.Model):
+    def __str__(self):
+        return self.user.username
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
