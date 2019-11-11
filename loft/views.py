@@ -409,3 +409,19 @@ def facebook_handler(request):
             return redirect("loft:index")
     else:
         return HttpResponse(status=500)
+
+
+
+def chatRoom(request):
+    if request.method == "GET":
+        user = request.user
+        if Player.objects.filter(user=user).exists():
+            return redirect("loft:chat")
+        else:
+            Player.objects.create(user=user).save()
+            player = Player.objects.filter(user=user)
+            user = player
+            return redirect("loft:chat")
+
+    else:
+            return HttpResponse(status=500)
