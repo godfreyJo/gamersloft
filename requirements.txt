@@ -4,7 +4,7 @@ chardet==3.0.4
 defusedxml==0.5.0
 dj-database-url==0.5.0
 dj-static==0.0.6
-Django==2.1.11
+Django==2.2.10
 gunicorn==19.9.0
 html5lib==1.0.1
 idna==2.8
