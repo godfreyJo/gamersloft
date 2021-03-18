@@ -9,7 +9,7 @@ gunicorn==19.9.0
 html5lib==1.0.1
 idna==2.8
 Markdown==3.0.1
-oauthlib==2.0.6
+oauthlib==3.0.0
 psycopg2==2.7.6.1
 PyJWT==1.7.1
 python-decouple==3.1
