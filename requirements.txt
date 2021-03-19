@@ -10,7 +10,7 @@ html5lib==1.0.1
 idna==2.8
 Markdown==3.0.1
 oauthlib==3.0.0
-psycopg2==2.7.6.1
+psycopg2==2.8.6
 PyJWT==1.7.1
 python-decouple==3.1
 python-social-auth==0.3.6
