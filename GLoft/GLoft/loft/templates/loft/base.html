@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gameloft</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'loft/bulma-0.6.2/css/bulma.css' %}"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'loft/main.css' %}"/>
+</head>
+<body>
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'loft:index' %}">
+            <img src="{% static 'loft/images/gamer.jpg' %}" alt="Bulma: a modern CSS framework based on Flexbox"
+                 width="40" height="40">
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">New Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ChatRoom</a>
+      </li>
+    </ul>
+  </div>
+
+    <div class="navbar-end">
+
+        <div class="navbar-item">
+          {% if request.path == "/login" %}
+            <a href="{% url 'loft:signup' %}" class="button">Signup</a>
+            {% elif request.path == "/signup"  %}
+            <a href="{% url 'loft:login' %}" class="button">Login</a>
+            {% elif request.path == "/home"  %}
+            <a href="{% url 'loft:login' %}" class="button">Login</a>
+        {% endif %}
+        </div>
+    </div>
+</nav>
+<section class="section">
+    <div class="container">
+        {% block content %}{% endblock content %}
+    </div>
+</section>
+
+</body>
+</html>
