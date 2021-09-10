@@ -44,7 +44,7 @@ ruamel.yaml.clib==0.2.2
 six==1.15.0
 social-auth-app-django==4.0.0
 social-auth-core==4.1.0
-sqlparse==0.4.1
+sqlparse==0.4.2
 static3==0.7.0
 Unipath==1.1
 uritemplate==3.0.1
