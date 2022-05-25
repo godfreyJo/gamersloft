@@ -31,7 +31,7 @@ packaging==20.9
 psycopg2==2.8.6
 psycopg2-binary==2.8.6
 pycparser==2.20
-PyJWT==2.0.1
+PyJWT==2.4.0
 pyparsing==2.4.7
 python-decouple==3.4
 python-social-auth==0.3.6
